@@ -10,7 +10,7 @@ root = ttk.Window(title="simpleTimer", themename="darkly")
 def runTimer():
     minutes = int(setTimer.get())
     total = int(setTimer.get())
-    while minutes * 60 != 0:
+    while minutes > 0:
         minutes = minutes - 1/60 
         timeRem.configure(amounttotal = total)
         timeRem.configure(amountused = round(minutes))
