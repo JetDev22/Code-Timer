@@ -21,14 +21,14 @@ def runTimer():
         timeRem.configure(amountused = round(minutes))
         root.after(1000, root.update())
         if stopped == True:
-            timeRem.configure(amountused = 0)
-            setTimer.delete(0,END)
             break
     beep(sound = 5)
 
 def stopTimer():
     global stopped
     stopped = True
+    timeRem.configure(amountused = 0)
+    setTimer.delete(0,END)
     return stopped
 
 # Timer Meter
